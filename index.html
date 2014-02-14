@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"> 
+
+	<title>prezi 教學</title>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script type="text/javascript">
+
+	</script>
+
+	<style type="text/css">
+		@import url(http://fonts.googleapis.com/css?family=Montserrat|Open+Sans:400,300);
+
+		body {
+			margin: 0px;
+			font: 15px Open Sans,sans-serif;
+		}
+		header {
+			background-color: blue;
+			background-image:url('./image/background.jpg');
+			padding: 30px;
+		}		
+		main {
+			background-color: white;
+			padding: 30px 0px 30px 0px;
+		}
+		footer {
+			background-color:gray;
+			color: white;
+			padding: 30px;
+			text-align: center;
+		}
+
+		h1 {
+			color: white; font: 300 40px 'Open Sans';
+			width: 300px;
+			margin: 0px;
+		}
+
+		.wrapper{
+			padding: 10px 100px 10px 100px;
+		}
+
+		.subtitle {
+			font: 20px;
+			color: #2255aa;
+			text-decoration: underline;
+		}
+		.article {
+			color: #4d4e53;
+		}
+		hr {
+			margin: 0px 70px 0px 70px;
+		}
+
+		a:link {text-decoration: none; color: #0095dd;}    /* unvisited link */
+		a:visited {text-decoration: none; color: #0095dd;} /* visited link */
+		a:hover {text-decoration: none; color: #369;}   /* mouse over link */
+		a:active {text-decoration: none; color: red;}  /* selected link */
+
+
+/*Now the styles*/
+.accordian * {
+	margin: 0; 
+	padding: 0;
+}
+
+/*Time to apply widths for accordian to work
+Width of image = 640px
+total images = 5
+so width of hovered image = 640px
+width of un-hovered image = 40px - you can set this to anything
+so total container width = 640 + 40*4 = 800px;
+default width = 800/5 = 160px;
+*/
+
+.accordian {
+	width: 805px; height: 320px;
+	overflow: hidden;
+	
+	/*Time for some styling*/
+	margin: 100px auto;
+	box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
+	-webkit-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
+	-moz-box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.35);
+}
+
+/*A small hack to prevent flickering on some browsers*/
+.accordian ul {
+	width: 2000px;
+	/*This will give ample space to the last item to move
+	instead of falling down/flickering during hovers.*/
+}
+
+.accordian li {
+	position: relative;
+	display: block;
+	width: 160px;
+	float: left;
+	
+	border-left: 1px solid #888;
+	
+	box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
+	-moz-box-shadow: 0 0 25px 10px rgba(0, 0, 0, 0.5);
+	
+	/*Transitions to give animation effect*/
+	transition: all 0.5s;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	/*If you hover on the images now you should be able to 
+	see the basic accordian*/
+}
+
+/*Reduce with of un-hovered elements*/
+.accordian ul:hover li {width: 40px;}
+/*Lets apply hover effects now*/
+/*The LI hover style should override the UL hover style*/
+.accordian ul li:hover {width: 640px;}
+
+
+.accordian li #imgblock {
+	display: block;
+}
+
+/*Image title styles*/
+.image_title {
+	background: rgba(0, 0, 0, 0.5);
+	position: absolute;
+	left: 0; bottom: 0;	
+	width: 640px;
+}
+.image_title a {
+	display: block;
+	color: #fff;
+	text-decoration: none;
+	padding: 20px;
+	font-size: 16px;
+}
+
+
+	</style>
+</head>
+<body>
+	<header class="header">
+		<h1>Prezi 教學資料</h1>
+	</header>
+
+	<main class="container">
+		<div class="wrapper">
+			<h2 class="subtitle" ><a href="./prezi_slide/slide.html" target="_blank">教學投影片</a></h2>
+			<div class="article">
+				type: slide<br />
+				Prezi的內容在這裡。<br />
+				方向鍵 → & ↓ - 切換下一頁<br />
+				方向鍵 ← & ↑ - 切換上一頁<br />
+			</div>
+		</div>
+
+		<div class="wrapper">
+			<h2 class="subtitle" ><a href="http://youtu.be/khxBKBCAmBs" target="_blank">prezi介紹</a></h2>
+			<div class="article">
+				type: video<br />
+				Prezi是什麼？<br />介紹Prezi的特色及如何註冊一個帳號。
+			</div>
+		</div>
+
+		<div class="wrapper">
+			<h2 class="subtitle" ><a href="http://youtu.be/XUQpK9cyQ18" target="_blank">prezi編輯教學</a></h2>
+			<div class="article">
+				type: video<br />
+				Prezi怎麼使用？<br />說明基本的工具操作和物件的特性。
+			</div>
+		</div>
+
+		<div class="wrapper">
+			<h2 class="subtitle" ><a href="http://youtu.be/mDRHyGhDyZs" target="_blank">示範1</a></h2>
+			<div class="article">
+				type: video<br />
+				一組範例。
+			</div>
+		</div>
+
+		<div class="wrapper">
+			<h2 class="subtitle" ><a href="http://youtu.be/0fY88ySse8k" target="_blank">示範2</a></h2>
+			<div class="article">
+				type: video<br />
+				再來一組示範。
+			</div>
+		</div>
+
+		<div class="wrapper">
+			<h2 class="subtitle" ><a href="http://prezi.com/explore/popular/" target="_blank">Show Me More</a></h2>
+		<!-- We will make a simple accordian with hover effects 
+		The markup will have a list with images and the titles-->
+		<div class="accordian">
+			<ul>
+				<li>
+					<div class="image_title">
+						<a href="http://prezi.com/u5mkv-zyfnbu/city-science-mit-media-lab/" target="_blank">City Science: MIT Media Lab</a>
+					</div>
+					<a>
+						<img class="imgblock" src="image/p5.png" style="height:320px; width:640px;" />
+					</a>
+				</li>
+				<li>
+					<div class="image_title">
+						<a href="http://prezi.com/xwufuhwf4dgt/messy-notes-prezi-template/" target="_blank">Messy Notes - Prezi Template</a>
+					</div>
+					<a>
+						<img class="imgblock" src="image/p3.png" style="height:320px; width:640px;" />
+					</a>
+				</li>
+				<li>
+					<div class="image_title">
+						<a href="http://prezi.com/t9jovhggm3md/26-steps-to-follow-to-develop-your-website/" target="_blank">26 steps to follow to develop your website</a>
+					</div>
+					<a>
+						<img class="imgblock" src="image/p2.png" style="height:320px; width:640px;" />
+					</a>
+				</li>
+				<li>
+					<div class="image_title">
+						<a href="http://prezi.com/dukpkfwpjwaz/the-illustrated-guide-to-a-phd/#" target="_blank">The Illustrated Guide to a Ph.D.</a>
+					</div>
+					<a>
+						<img class="imgblock" src="image/p1.png" style="height:320px; width:640px;" />
+					</a>
+				</li>
+				<li>
+					<div class="image_title">
+						<a href="http://prezi.com/bnjd70tlamp6/travel-in-london/" target="_blank">Travel in London</a>
+					</div>
+					<a>
+						<img class="imgblock" src="image/p4.png" style="height:320px; width:640px;" />
+					</a>
+				</li>
+			</ul>
+		</div>
+		</div>
+	</main>
+
+	<footer class="footer">
+		Copyright © 2014 NTOU CS LAB 505
+	</footer>
+</body>
+</html>
+
