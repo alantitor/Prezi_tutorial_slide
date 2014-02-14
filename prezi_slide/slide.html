@@ -1,0 +1,495 @@
+<!--
+Google IO 2012/2013 HTML5 Slide Template
+
+Authors: Eric Bidelman <ebidel@gmail.com>
+         Luke Mahé <lukem@google.com>
+
+URL: https://code.google.com/p/io-2012-slides
+-->
+
+<!--
+Modification
+
+Author: Alan Titor - 何欣諺, NTOU CS LAB 505
+
+Date: 2014/1/20
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>2014 Prezi slides</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">-->
+  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+  <!--This one seems to work all the time, but really small on ipad-->
+  <!--<meta name="viewport" content="initial-scale=0.4">-->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="stylesheet" media="all" href="theme/css/default.css">
+  <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="theme/css/phone.css">
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->
+  <script data-main="js/slides" src="js/require-1.0.8.min.js"></script>
+</head>
+<body style="opacity: 0">
+
+<!--  slides content is here  -->
+<slides class="layout-widescreen">
+
+  <slide class="logoslide nobackground">
+    <article class="flexbox vcenter">
+      <span><img src="images/ntou_logo.gif" style="height: 105px"></span>
+    </article>
+  </slide>
+
+  <slide class="title-slide segue nobackground">
+    <aside class="gdbar"><img src="images/ntou_icon_small.png"></aside>
+    <!-- The content of this hgroup is replaced programmatically through the slide_config.json. -->
+    <hgroup class="auto-fadein">
+      <h1 data-config-title><!-- populated from slide_config.json --></h1>
+      <h2 data-config-subtitle><!-- populated from slide_config.json --></h2>
+      <p data-config-presenter><!-- populated from slide_config.json --></p>
+    </hgroup>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>如何操作我</h2>
+      <!--<h3>Subtitle Placeholder</h3>-->
+    </hgroup>
+    <article>
+      <p>快捷鍵:</p>
+      <ul class="">  <!--  add class 'build', 'small'  -->
+	<li>'方向鍵 → & ↓' - 下一頁</li>
+	<li>'方向鍵 ← & ↑' - 上一頁</li>
+        <li>'f' - 全螢幕模式</li>
+        <li>'w' - 螢幕寬度調整</li>
+        <li>'o' - 預覽模式</li>
+      </ul>
+    </article>
+  </slide>
+
+
+  <!--  part I  -->
+  <slide class="segue dark nobackground">
+    <aside class="gdbar"><img src="images/ntou_icon_small.png"></aside>
+    <hgroup class="auto-fadein">
+      <h2>What is Prezi</h2>
+      <h3>免費 美觀 攜帶方便</h3>
+    </hgroup>
+  </slide>
+
+  <script>
+	function showFlash() {
+		document.getElementById("flash_control").style.display="none";
+		document.getElementById("flash_tag").innerHTML = "<iframe src=\"http://prezi.com/embed/pgh5a3xbuicm/?bgcolor=ffffff&amp;lock_to_path=0&amp;autoplay=0&amp;autohide_ctrls=0&amp;features=undefined&amp;disabled_features=undefined\" width=\"500px\" height=\"350px\" frameBorder=\"0\"></iframe>";
+		}
+
+	function deleteFlash() {
+		document.getElementById("flash_control").style.display="block";
+		document.getElementById("flash_tag").innerHTML = "";
+		
+	}
+  </script>
+  
+  <slide>  <!--  Flash is g*rb**e  -->
+	<hgroup>
+		<h2 onclick="deleteFlash()">Prezi 範例</h2>
+	</hgroup>
+	<article>
+		<p id="flash_control"><a onclick="showFlash()">播放投影片</a></p>
+		<p id="flash_tag" style="none"></p>		
+	</article>
+  </slide>
+
+
+  <slide>
+	<hgroup>
+		<h2>投影片設計模式</h2>
+	</hgroup>
+	<article>
+		<ul class="build">
+			<li>以頁面為單位
+				<ul>
+					<li>LiberOffice Impress</li>
+					<li>MS PowerPoint</li>
+				</ul>
+			</li>
+			<li>以位置及頁面為單位
+				<ul>
+					<li>Prezi</li>
+					<li>impress.js</li>
+					<li>HTML5</li>
+				</ul>
+			</li>
+		</ul>
+	</article>
+  </slide>
+
+  <slide>
+	<hgroup>
+		<h2>Prezi的特色</h2>
+	</hgroup>
+	<article>
+		<ul class="build">
+			<li>線上編輯</li>
+			<li>不需安裝軟體</li>
+			<li>線上儲存</li>
+			<li>免費版本帳號</li>
+		</ul>
+	</article>
+  </slide>
+
+  <slide hidden>  <!--  有什麼差別  -->
+	<hgroup>
+		<h2>Prezi 桌面版</h2>
+	</hgroup>
+	<article>
+		<p>由於網路版的Prezi容易斷線。如果想要穩定的編輯環境，可以使用桌面版，但兩版本的功能並無差別。
+		</p>
+	</article>
+  </slide>
+
+  <!--  part II  -->
+  <slide class="segue dark nobackground">
+    <aside class="gdbar"><img src="images/ntou_icon_small.png"></aside>
+    <hgroup class="auto-fadein">
+      <h2>How to Register Prezi Account</h2>
+      <h3>取得帳號</h3>
+    </hgroup>
+  </slide>
+
+  <slide>
+	<hgroup>
+		<h2>Step 1</h2>
+		<h3>註冊Prezi帳號</h3>
+	</hgroup>
+	<article>
+		<ul class="build">
+			<li><a href="http://prezi.com/">http://prezi.com</a></li>
+			<li>選擇註冊方式
+				<ul class="build">
+					<li><img src="images/Prezi_register_pa.png" alt="register new account" /></li>
+					<li><img src="images/Prezi_register_fa.png" alt="use facebook account"/></li>
+				</ul>
+			</li>
+		</ul>
+	</article>
+  </slide>
+
+  <slide>
+	<hgroup>
+		<h2>Step 2</h2>
+		<h3>選擇帳號類別</h3>
+	</hgroup>
+	<article class="flexbox vcenter">
+		<img src="images/Prezi_register_account.png" alt="prezi account type" title="" style="height:90%" />
+		<footer class="source">source: Prezi Web Site</footer>
+	</article>
+  </slide>
+
+  <slide>
+	<hgroup>
+		<h2>Step 3</h2>
+		<h3>輸入使用者資料</h3>
+	</hgroup>
+	<article class="flexbox vcenter">
+		<img src="images/Prezi_register_userinfo.png" alt="prezi enter user info" title="" style="height:80%" />
+		<footer class="source">source: Prezi Web Site</footer>
+	</article>
+  </slide>
+
+  <script>
+	var image_count = 0;  //  0 and 1
+	function image_change() {
+		
+	}
+  </script>
+
+  <slide>
+	<hgroup>
+  	<!--
+	add email image at this page
+	add javascript.  when I click image, change to next image.
+  	-->
+		<h2>註冊完成</h2>
+	</hgroup>
+	<article class="flexbox vcenter">
+		<img id="sign_image" onclick="image_change()" src="images/Prezi_manager.png" alt="prezi init UI" title="" style="width:100%" />
+		<footer id="sign_image_source" class="source">source: Prezi Web Site</footer>
+	</article>
+  </slide>
+
+  <slide hidden>
+	<hgroup>
+		<h2></h2>
+	</hgroup>
+	<article>
+		<iframe src="http://prezi.com/"></iframe>
+	</article>
+  </slide>
+
+  <slide class="segue dark quote nobackground">
+    <aside class="gdbar right bottom"><img src="images/google_developers_icon_128.png"></aside>
+    <article class="flexbox vleft auto-fadein">
+      <h2>Next...</h2>
+      <div class="author">
+        何欣諺<br />
+        NTOU Embedded Systems Laboratory
+      </div>
+    </article>
+  </slide>
+
+  <!--  part III  -->
+  <slide class="segue dark nobackground">
+    <aside class="gdbar"><img src="images/ntou_icon_small.png"></aside>
+    <hgroup class="auto-fadein">
+      <h2>How to Use Prezi</h2>
+      <h3>介面操作</h3>
+    </hgroup>
+  </slide>
+
+  <slide>
+	<hgroup>
+		<h2>投影片管理</h2>
+	</hgroup>
+	<article>  <!--  use image when pobulish  -->
+		<!--<iframe src="http://prezi.com/your/#"></iframe>-->
+		<img id="sign_image" onclick="image_change()" src="images/Prezi_manager2.png" alt="prezi init UI" title="" style="width:100%" />
+		<footer id="sign_image_source" class="source">source: Prezi Web Site</footer>
+	</article>
+  </slide>
+
+  <slide>
+	<hgroup>
+		<h2>建立新投影片</h2>
+	</hgroup>
+	<article class="flexbox vcenter">
+		<img src="images/Prezi_UI_create.png" alt="create slide" title="" style="height:100%" />
+	</article>
+  </slide>
+
+  <slide>
+	<hgroup>
+		<h2>UI介紹 and 滑鼠右鍵</h2>
+	</hgroup>
+	<article class="flexbox vcenter">
+		<img src="images/Prezi_inUI_layout.png" alt="inUI layout" title="" style="width:90%" />
+		<img src="images/Prezi_crash.png" alt="crash" title="" style="width:60%" />
+	</article>
+  </slide>
+
+<!--------------------------------------------------------------------------------------------------->
+
+  <!--  如何使用物件  -->
+  <slide>
+	<hgroup>
+		<h2>設定頁面(Frames &#38; Arrows)</h2>
+	</hgroup>
+	<article>
+		<ul>
+			<li><img src="images/Prezi_inUI_icon_FA.png" alt="inUI layout FA icon" title="" style="height:50px" /></li>
+			<li>Frame</li>
+			<li>Arrow</li>
+			<li>Line</li>
+			<li>Highlighter</li>
+		</ul>
+	</article>
+  </slide>
+
+  <slide>
+	<hgroup>
+		<h2>插入物件(Insert)</h2>
+	</hgroup>
+	<article>
+		<ul>
+			<li><img src="images/Prezi_inUI_icon_insert.png" alt="inUI layout insert icon" title="" style="height:50px" /></li>
+			<li>Image</li>
+			<li>Symbols &#38; shapes</li>
+			<li>Diagram</li>
+			<li>Video</li>
+			<li>Music</li>
+			<li>File</li>
+			<li>PPT</li>
+		</ul>
+	</article>
+  </slide>
+
+  <slide>
+	<hgroup>
+		<h2>變換主題(Themes)</h2>
+	</hgroup>
+	<article>
+		<ul>
+			<li><img src="images/Prezi_inUI_icon_theme.png" alt="inUI layout theme icon" title="" style="height:50px" /></li>
+			<li>選擇不同的theme，讓頁面配色更美觀</li>
+			<li>文字有中文的投影片，建議選擇"中文theme"，避免中文無法顯示</li>
+		</ul>
+	</article>
+  </slide>
+
+  <slide>  <!--  most important*****  -->
+	<hgroup>
+		<h2>規劃頁面和路徑</h2>
+		<h3>Frame and Path</h3>
+	</hgroup>
+	<article class="flexbox vcenter">
+		<img src="images/Prezi_inUI_path.png" alt="set slides order" title="" style="width:90%" />
+	</article>
+  </slide>
+
+  <slide>
+	<hgroup>
+		<h2>Play and Share Your Slide</h2>
+	</hgroup>
+	<article>
+		<ul>
+			<li>Play - 播放</li>
+			<li>Share - 分享連結</li>
+			<li>Embedded - 網頁嵌入視窗</li>
+			<li>Download - 下載到你的空間</li>
+		</ul>
+	</article>
+  </slide>
+
+  <slide>
+	<hgroup>
+		<h2>Prezi真的很簡單</h2>
+	</hgroup>
+	<article class="flexbox vcenter">
+		<img src="images/Bob_Ross.jpg" alt="Bob Ross" title="" style="height:90%" />
+		<footer class="source">source: http://en.wikipedia.org/wiki/Bob_Ross</footer>
+	</article>
+  </slide>
+
+  <slide class="segue dark quote nobackground">
+    <aside class="gdbar right bottom"><img src="images/google_developers_icon_128.png"></aside>
+    <article class="flexbox vleft auto-fadein">
+      <h2>Next...</h2>
+      <div class="author">
+        何欣諺<br />
+        NTOU Embedded Systems Laboratory
+      </div>
+    </article>
+  </slide>
+
+  <!--  give 3 examples  -->
+  <!--
+	learn points:
+	1. show how to use template
+	2. show how to control path (down)
+	3. show how to ???
+  -->
+
+  <!--  part IV  -->  <!--  The World  -->
+  <slide class="segue dark nobackground">
+    <aside class="gdbar"><img src="images/ntou_icon_small.png"></aside>
+    <hgroup class="auto-fadein">
+      <h2>示範</h2>
+      <h3>Project: The World</h3>
+    </hgroup>
+  </slide>
+
+  <slide>  <!--  insert tip and demo video  -->
+	<hgroup>
+		<h2>示範功能</h2>
+	</hgroup>
+	<article>
+		<ul>
+			<li>基本操作</li>
+			<li>插入圖片、文字</li>
+			<li>設定頁面</li>
+			<li>設定路徑</li>
+		</ul>
+	</article>
+  </slide>
+
+  <!--  part V  -->  <!--  基礎穴道針炙 - 手太陰肺經  -->
+  <slide class="segue dark nobackground">
+    <aside class="gdbar"><img src="images/ntou_icon_small.png"></aside>
+    <hgroup class="auto-fadein">
+      <h2>示範</h2>
+      <h3>Project: 基礎穴道針炙 - 手太陰肺經</h3>
+    </hgroup>
+  </slide>
+
+  <slide>  <!--  insert demo video  -->
+	<hgroup>
+		<h2>示範功能</h2>
+	</hgroup>
+	<article>
+		<ul>
+			<li>進階操作</li>
+			<li>頁面切換</li>
+			<li>放大個別部位資料</li>
+			<li>轉場動畫(頁面浮現)</li>
+			<ul>
+				<li>資料來源</li>
+				<li>基礎穴道針灸指南 黃明助 張豐榮</li>
+				<li>http://www.god-loveu.com/health/n105173.htm</li>
+			</ul>
+		</ul>
+	</article>
+  </slide>
+
+
+  <!--  part VII  -->
+  <!--  end slide  -->
+  <slide hidden class="segue dark quote nobackground">
+    <aside class="gdbar right bottom"><img src="images/ntou_icon_small.png"></aside>
+    <article class="flexbox vleft auto-fadein">
+      <q>
+        This is an example of quote text.
+      </q>
+      <div class="author">
+        Name<br>
+        Company
+      </div>
+    </article>
+  </slide>
+
+  <slide class="thank-you-slide segue nobackground">
+    <aside class="gdbar right"><img src="images/ntou_icon_small.png"></aside>
+    <article class="flexbox vleft auto-fadein">
+      <h2>&lt;Thank You!&gt;</h2>
+    </article>
+    <p>
+	海洋大學資工系嵌入式系統實驗室</br>
+	教授 - 辛華昀
+    </p>
+
+    <!--<p class="auto-fadein" data-config-contact>-->
+      <!-- populated from slide_config.json -->
+
+    </p>
+  </slide>
+
+  <slide hidden class="logoslide dark nobackground">
+    <article class="flexbox vcenter">
+      <span><img src="images/ntou_logo.gif" style="height: 105px"></span>
+    </article>
+  </slide>
+
+  <slide class="backdrop"></slide>
+
+</slides>
+<!--  end of slides content  -->
+
+<script>
+var _gaq = _gaq || [];
+_gaq.push(['_setAccount', 'UA-XXXXXXXX-1']);
+_gaq.push(['_trackPageview']);
+
+(function() {
+  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
+</script>
+
+<!--[if IE]>
+  <script src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js"></script>
+  <script>CFInstall.check({mode: 'overlay'});</script>
+<![endif]-->
+</body>
+</html>
